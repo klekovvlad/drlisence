@@ -96,19 +96,23 @@ a.header__feedback {
 
 .header {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    background: #fff;
     position: relative;
-    z-index: 2;
+    z-index: 25;
     &__wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 20px 0px;
+        position: relative;
+        z-index: 25;
     }
     &__logo {
         h3 {
             text-align: left;
             font-size: 24px;
             .bold();
+            margin-bottom: 0;
         }
     }
     &__telegram {
@@ -123,11 +127,14 @@ a.header__feedback {
 }
 
 .nav {
+    position: relative;
+    background: #fff;
     &__items {
         display: flex;
         align-items: center;
         justify-content: space-around;
         position: relative;
+        z-index: 15;
     }
     &__item {
         padding: 30px 0px;
@@ -158,16 +165,22 @@ a.header__feedback {
 }
 
 .menu {
+    position: relative;
+    z-index: -1;
     &__items {
         position: relative;
+        z-index: 15;
     }
     &__item {
         visibility: hidden;
         opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top;
         position: absolute;
         min-width: 300px;
         background: #fff;
         border: 1px solid #E6E6E6;
+        transition: all 0.3s ease-in-out;
         ul {
             li {
                 a {
@@ -192,17 +205,19 @@ a.header__feedback {
 .menu__item-show {
     visibility: visible;
     opacity: 1;
+    transform: scaleY(1);
 }
 
 .main {
-    background: url(../img/mainbg.png) no-repeat center;
-    background-size: cover;
+    position: relative;
     &__wrapper {
         min-height: 673px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+        position: relative;
+        z-index: 2;
         h1, h2 {
             color: #fff;
         }
@@ -219,10 +234,34 @@ a.header__feedback {
             margin-bottom: 50px;
         }
     }
+    video {
+        position: absolute;
+        top: -200px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1080px;
+        width: 100%;
+        z-index: -1;
+    }
+}
+.main:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .services {
     padding: 60px 0px;
+    position: relative;
+    z-index: 2;
+    background: #fff;
     &__wrapper {
         padding: 40px 0px 0px 0px;
         display: grid;
@@ -828,7 +867,10 @@ a.header__feedback {
     
     .header {
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         z-index: 10;
         &__wrapper {
             display: flex;
@@ -931,6 +973,8 @@ a.header__feedback {
             background: #fff;
             border: 1px solid #E6E6E6;
             top: 0;
+            transform: scaleX(0) scaleY(1.0);
+            transform-origin: left;
             ul {
                 li {
                     a:last-child {
@@ -944,12 +988,14 @@ a.header__feedback {
     .menu__item-show {
         visibility: visible;
         opacity: 1;
+        transform: scaleX(1.0) scaleY(1.0);
+        transition-delay: 0.2s;
     }
     
     .main {
-        background: url(../img/mainbg.png) no-repeat center;
-        background-size: cover;
+        overflow: hidden;
         &__wrapper {
+            margin-top: 90px;
             min-height: 650px;
             h1 {
                 max-width: 300px;
@@ -961,6 +1007,10 @@ a.header__feedback {
                 font-size: 1em;
                 margin-bottom: 30px;
             }
+        }
+        video {
+            width: 1920px;
+            transform: translateX(-70%) translateY(10%);
         }
     }
     
