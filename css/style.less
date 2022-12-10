@@ -92,7 +92,7 @@ a.header__feedback {
 .animate-right {
     opacity: 0;
     transform: translateX(100px);
-    transition: 2s all ease-in-out;
+    transition: 0.3s all ease-in-out;
 }
 .animate {
     opacity: 1;
@@ -260,6 +260,9 @@ a.header__feedback {
         height: 1080px;
         width: 100%;
         z-index: -1;
+    }
+    video.mobile {
+        display: none;
     }
 }
 .main:before {
@@ -810,6 +813,105 @@ a.header__feedback {
     }
 }
 
+.main-pages {
+    position: relative;
+    overflow: hidden;
+    &__wrapper {
+        min-height: 700px;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            color: #fff;
+            .bold();
+            font-size: 48px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0px auto;
+            margin-bottom: 30px;
+        }
+    }
+    img {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+.main-pages:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+}
+
+.pages {
+    padding: 60px 0px;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    h4 {
+        margin-bottom: 50px;
+    }
+    p {
+        font-size: 20px;
+    }
+    &__wrapper {
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 80px;
+    }
+}
+
+.list {
+    padding: 60px 0px;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        padding-bottom: 50px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        &-top {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            margin-right: 50px;
+            max-width: 80px;
+        }
+        p {
+            font-size: 20px;
+            padding-left: 130px;
+        }
+        h5 {
+            .bold();
+            font-size: 40px;
+        }
+    }
+}
+.buttons {
+    padding: 50px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 1100px){
     .container {
         max-width: none;
@@ -907,8 +1009,10 @@ a.header__feedback {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        right: 0;
         z-index: 10;
+        max-width: 100vw;
+        overflow: hidden;
         &__wrapper {
             display: flex;
             align-items: center;
@@ -1031,9 +1135,9 @@ a.header__feedback {
     
     .main {
         overflow: hidden;
+        margin-top: 0px;
         &__wrapper {
-            margin-top: 90px;
-            min-height: 650px;
+            min-height: 580px;
             h1 {
                 max-width: 300px;
                 font-size: 28px;
@@ -1045,14 +1149,18 @@ a.header__feedback {
                 margin-bottom: 30px;
             }
         }
-        video {
-            width: 1920px;
-            transform: translateX(-70%) translateY(10%);
+        video.destkop {
+            display: none;
+        }
+        video.mobile {
+            display: block;
+            max-width: 100%;
         }
     }
     
     .services {
         padding: 50px 0px;
+        overflow: hidden;
         &__wrapper {
             padding: 50px 0px 0px 0px;
             grid-template-columns: 1fr;
@@ -1062,6 +1170,7 @@ a.header__feedback {
     
     .steps {
         padding: 50px 0px;
+        overflow: hidden;
         p {
             font-size: 1em;
             margin-top: 30px;
@@ -1085,6 +1194,7 @@ a.header__feedback {
     
     .safe {
         padding: 50px 0px;
+        overflow: hidden;
         p {
             font-size: 1em;
             margin-top: 40px;
@@ -1097,6 +1207,7 @@ a.header__feedback {
     }
     
     .advantage {
+        overflow: hidden;
         padding: 50px 0px;
         &__wrapper {
             grid-template-columns: repeat(2, 1fr);
@@ -1127,6 +1238,7 @@ a.header__feedback {
     }
     
     .faq {
+        overflow: hidden;
         padding: 50px 0px;
         &__wrapper {
             padding-top: 50px;
@@ -1155,6 +1267,7 @@ a.header__feedback {
     }
     
     .usl {
+        overflow: hidden;
         padding: 50px 0px;
         &__wrapper {
             padding-top: 50px;
@@ -1181,6 +1294,7 @@ a.header__feedback {
     }
     
     .choise {
+        overflow: hidden;
         padding: 50px 0px;
         &__wrapper {
             padding-top: 50px;
@@ -1218,6 +1332,7 @@ a.header__feedback {
     }
     
     .option {
+        overflow: hidden;
         padding: 50px 0px 60px 0px;
         &__wrapper {
             padding-top: 50px;
@@ -1233,6 +1348,7 @@ a.header__feedback {
     }
     
     .footer {
+        overflow: hidden;
         padding: 30px 0px;
         &__wrapper {
             display: grid;
@@ -1266,6 +1382,61 @@ a.header__feedback {
         &__contacts {
             a.header__feedback {
                 text-align: center;
+            }
+        }
+    }
+
+    .main-pages {
+        &__wrapper {
+            min-height: 700px;
+            h1 {
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+        }
+        img {
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: none;
+            height: 100%;
+        }
+    }
+    
+    .pages {
+        padding: 50px 0px;
+        h4 {
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 1em;
+        }
+        &__wrapper {
+            padding-top: 30px;
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+        }
+    }
+    
+    .list {
+        padding: 50px 0px;
+        &__wrapper {
+            grid-gap: 40px;
+            padding-bottom: 50px;
+        }
+        &__item {
+            &-top {
+                margin-bottom: 20px;
+            }
+            img {
+                margin-right: 20px;
+                max-width: 50px;
+            }
+            p {
+                font-size: 1em;
+                padding-left: 0px;
+            }
+            h5 {
+                font-size: 22px;
             }
         }
     }

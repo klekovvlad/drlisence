@@ -31,12 +31,14 @@ menuItems.forEach(function(menuItem,index) {
 const questonItems = document.querySelectorAll('.faq__question');
 const answerItems = document.querySelectorAll('.faq__answer');
 
-questonItems.forEach(function(questionItem, index) {
-    questionItem.addEventListener('click',() => {
-        questionItem.classList.toggle('faq__question-active');
-        answerItems[index].classList.toggle('faq__answer-active');
-    })
-})
+if(questonItems){
+    questonItems.forEach(function(questionItem, index) {
+        questionItem.addEventListener('click',() => {
+            questionItem.classList.toggle('faq__question-active');
+            answerItems[index].classList.toggle('faq__answer-active');
+        });
+    });
+};
 
 //Меню мобильное
 const menuMobile = document.querySelector('.header__menu');
@@ -51,20 +53,24 @@ menuMobile.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     let windowCenter = window.innerHeight * 0.75;
     const animateUp = document.querySelectorAll('.animate-up');
-
-    animateUp.forEach(el => {
-      let position = el.getBoundingClientRect().top - windowCenter;
-      if (position <= 0) {
-        el.classList.add('animate');
-      };
-    });
-  });
-  
-  function sideAnimation() {
     const animateRight = document.querySelectorAll('.animate-right');
-    animateRight.forEach(el => {
-      el.classList.add('animate');
-    })
-  };
-  
-  sideAnimation();
+
+    if(animateUp){
+        animateUp.forEach(el => {
+            let position = el.getBoundingClientRect().top - windowCenter;
+            if (position <= 0) {
+              el.classList.add('animate');
+            };
+          });
+    };
+
+    if(animateRight){
+        animateRight.forEach(el => {
+            let position = el.getBoundingClientRect().top - windowCenter;
+              if (position <= 0) {
+                el.classList.add('animate');
+              };
+            });
+    }
+
+});
