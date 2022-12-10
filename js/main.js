@@ -45,4 +45,26 @@ const nav = document.querySelector('.nav');
 menuMobile.addEventListener('click', () => {
     menuMobile.classList.toggle('header__menu-close')
     nav.classList.toggle('nav-show');
-})
+});
+
+//Анимации
+window.addEventListener('scroll', () => {
+    let windowCenter = window.innerHeight * 0.75;
+    const animateUp = document.querySelectorAll('.animate-up');
+
+    animateUp.forEach(el => {
+      let position = el.getBoundingClientRect().top - windowCenter;
+      if (position <= 0) {
+        el.classList.add('animate');
+      };
+    });
+  });
+  
+  function sideAnimation() {
+    const animateRight = document.querySelectorAll('.animate-right');
+    animateRight.forEach(el => {
+      el.classList.add('animate');
+    })
+  };
+  
+  sideAnimation();

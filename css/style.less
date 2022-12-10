@@ -79,6 +79,21 @@ a.header__feedback {
     margin-left: 45px;
 }
 
+.animate-up {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.3s all ease-in-out;
+}
+.animate-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 2s all ease-in-out;
+}
+.animate {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
 .header {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -255,6 +270,18 @@ a.header__feedback {
     &__item:hover:before {
         left: 0%;
     }
+    .animate-up:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+    .animate-up:nth-child(3) {
+        transition-delay: 0.6s;
+    }
+    .animate-up:nth-child(5) {
+        transition-delay: 0.3s;
+    }
+    .animate-up:nth-child(6) {
+        transition-delay: 0.6s;
+    }
 }
 
 .steps {
@@ -335,6 +362,15 @@ a.header__feedback {
             color: @orange;
         }
     }
+    .animate-up:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+    .animate-up:nth-child(5) {
+        transition-delay: 1s;
+    }
+    .animate-up:nth-child(4) {
+        transition-delay: 0.3s;
+    }
 }
 
 .safe {
@@ -388,6 +424,15 @@ a.header__feedback {
             margin-bottom: 20px;
             font-size: 20px;
         }
+    }
+    .animate-up:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+    .animate-up:nth-child(3) {
+        transition-delay: 0.6s;
+    }
+    .animate-up:nth-child(4) {
+        transition-delay: 0.9s;
     }
 }
 
@@ -555,6 +600,15 @@ a.header__feedback {
             min-width: 350px;
         }
     }
+    .animate-up:nth-child(2) {
+        transition-delay: 0.6s;
+    }
+    .animate-up:nth-child(4) {
+        transition-delay: 0.3s;
+    }
+    .animate-up:nth-child(5) {
+        transition-delay: 0.6s;
+    }
 }
 
 .option {
@@ -599,6 +653,21 @@ a.header__feedback {
         a:hover:before {
             bottom: 0;
         }
+    }
+    .animate-up:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+    .animate-up:nth-child(3) {
+        transition-delay: 0.6s;
+    }
+    .animate-up:nth-child(4) {
+        transition-delay: 0.9s;
+    }
+    .animate-up:nth-child(5) {
+        transition-delay: 1.2s;
+    }
+    .animate-up:nth-child(6) {
+        transition-delay: 1.5s;
     }
 }
 
@@ -724,6 +793,9 @@ a.header__feedback {
 }
 
 @media (max-width: 768px) {
+    .animate-up {
+        transition-delay: 0s !important;
+    }
     .container {
         padding: 0px 10px;
     }

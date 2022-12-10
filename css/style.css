@@ -81,6 +81,20 @@ a.header__feedback {
   line-height: 120%;
   margin-left: 45px;
 }
+.animate-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 0.3s all ease-in-out;
+}
+.animate-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 2s all ease-in-out;
+}
+.animate {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
 .header {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -253,6 +267,18 @@ a.header__feedback {
 .services__item:hover:before {
   left: 0%;
 }
+.services .animate-up:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.services .animate-up:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.services .animate-up:nth-child(5) {
+  transition-delay: 0.3s;
+}
+.services .animate-up:nth-child(6) {
+  transition-delay: 0.6s;
+}
 .steps {
   padding: 60px 0px;
 }
@@ -338,6 +364,15 @@ a.header__feedback {
 .steps__item:nth-child(4) span.num {
   color: #FFA843;
 }
+.steps .animate-up:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.steps .animate-up:nth-child(5) {
+  transition-delay: 1s;
+}
+.steps .animate-up:nth-child(4) {
+  transition-delay: 0.3s;
+}
 .safe {
   padding: 60px 0px;
 }
@@ -392,6 +427,15 @@ a.header__feedback {
 .advantage__text p {
   margin-bottom: 20px;
   font-size: 20px;
+}
+.advantage .animate-up:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.advantage .animate-up:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.advantage .animate-up:nth-child(4) {
+  transition-delay: 0.9s;
 }
 .faq {
   padding: 60px 0px;
@@ -559,6 +603,15 @@ a.header__feedback {
 .choise__text .main-button {
   min-width: 350px;
 }
+.choise .animate-up:nth-child(2) {
+  transition-delay: 0.6s;
+}
+.choise .animate-up:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.choise .animate-up:nth-child(5) {
+  transition-delay: 0.6s;
+}
 .option {
   padding: 60px 0px 80px 0px;
 }
@@ -604,6 +657,21 @@ a.header__feedback {
 }
 .option__wrapper a:hover:before {
   bottom: 0;
+}
+.option .animate-up:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.option .animate-up:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.option .animate-up:nth-child(4) {
+  transition-delay: 0.9s;
+}
+.option .animate-up:nth-child(5) {
+  transition-delay: 1.2s;
+}
+.option .animate-up:nth-child(6) {
+  transition-delay: 1.5s;
 }
 .footer {
   padding: 50px 0px;
@@ -710,6 +778,9 @@ a.header__feedback {
   }
 }
 @media (max-width: 768px) {
+  .animate-up {
+    transition-delay: 0s !important;
+  }
   .container {
     padding: 0px 10px;
   }
