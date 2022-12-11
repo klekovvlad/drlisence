@@ -129,7 +129,9 @@
         <div class="container">
             <div class="main__wrapper">
                 <h1>Водительские права <br>
-                    <div class="typing"></div>
+                    <div class="typing__wrapper">
+                        <div class="typing"></div>
+                    </div>
                     <div id="typed-strings">
                         <span>без предоплаты</span>
                         <span>быстрое получение на любые категории</span>
@@ -138,7 +140,7 @@
                     </div>
                 </h1>
                 <h2>Получить водительское удостоверение быстро и безопасно</h2>
-                <button class="main-button">Узнать стоимость</button>
+                <button class="main-button popup-btn">Узнать стоимость</button>
             </div>
         </div>
     </main>
@@ -148,32 +150,32 @@
             <h3>Услуги</h3>
             <h4>Оказываем полный перечень услуг</h4>
             <div class="services__wrapper">
-                <div class="services__item animate-up">
+                <div class="services__item animate-up popup-btn">
                     <h5>Для новичков</h5>
                     <span class="text">Нужны права, но нет времени или желания учиться</span>
                     <img src="img/services/1.webp" alt="Для новичков">
                 </div>
-                <div class="services__item animate-up">
+                <div class="services__item animate-up popup-btn">
                     <h5>Для лишенных</h5>
                     <span class="text">Вас лишили прав, но без автомобиля не обойтись</span>
                     <img src="img/services/2.webp" alt="Для лишенных">
                 </div>
-                <div class="services__item animate-up">
+                <div class="services__item animate-up popup-btn">
                     <h5>Для профессионалов</h5>
                     <span class="text">Откроем любую категорию для работы</span>
                     <img src="img/services/3.webp" alt="Для профессионалов">
                 </div>
-                <div class="services__item animate-up">
+                <div class="services__item animate-up popup-btn">
                     <h5>Для специалистов</h5>
                     <span class="text">Откроем любой доступ к спецтехнике</span>
                     <img src="img/services/4.webp" alt="Для специалистов">
                 </div>
-                <div class="services__item animate-up">
+                <div class="services__item animate-up popup-btn">
                     <h5>Для путешественников</h5>
                     <span class="text">Оформим права <br> международной <br> категории<br> в коротки<br> сроки</span>
                     <img src="img/services/5.webp" alt="Для путешественников">
                 </div>
-                <div class="services__item animate-up">
+                <div class="services__item animate-up popup-btn">
                     <h5>Для капитанов</h5>
                     <span class="text">Откроем доступ к суднам, ходите по воде уже завтра</span>
                     <img src="img/services/6.webp" alt="Для капитанов">
@@ -191,7 +193,7 @@
                     <h6>Заявка</h6>
                     <img class="icon" src="img/icons/steps-1.svg" alt="">
                     <span class="text">Заполните электронную форму заявки</span>
-                    <a href="">Отправить</a>
+                    <a class="popup-btn" href="">Отправить</a>
                 </div>
                 <div class="steps__item animate-up">
                     <h6>Консультация</h6>
@@ -331,7 +333,7 @@
                         <li class="animate-up">Международная доставка</li>
                         <li class="animate-up">Потребуется адрес, индекс, ФИО</li>
                     </ul>
-                    <button class="main-button animate-up">Заказать</button>
+                    <button class="main-button animate-up popup-btn">Заказать</button>
                 </div>
                 <img class="animate-right" src="img/category-b-2.webp" alt="Получить права категории B">
             </div>
@@ -376,7 +378,7 @@
             </div>
             <div class="choise__text animate-up">
                 <p>Купить водительские права желаемой категории просто: внесите в бланк заказа сведения о водителе и внесите минимальную предоплату, а бюрократическую работу сделает наш менеджер.</p>
-                <button class="main-button">Оставить заявку</button>
+                <button class="main-button popup-btn">Оставить заявку</button>
             </div>
         </div>
     </section>
@@ -386,27 +388,27 @@
             <h3>Варианты прав</h3>
             <h4>Сделаем дубликат, без базы, тракторные и на спецтехнику</h4>
             <div class="option__wrapper">
-                <a href="" class="option__item animate-up">
+                <a href="" class="option__item animate-up popup-btn">
                     Дубликат
                     <img src="img/option/option-1.webp" alt="">
                 </a>
-                <a href="" class="option__item animate-up">
+                <a href="" class="option__item animate-up popup-btn">
                     Зеркальные
                     <img src="img/option/option-2.webp" alt="">
                 </a>
-                <a href="" class="option__item animate-up">
+                <a href="" class="option__item animate-up popup-btn">
                     Без базы
                     <img src="img/option/option-3.webp" alt="">
                 </a>
-                <a href="" class="option__item animate-up">
+                <a href="" class="option__item animate-up popup-btn">
                     Тракторные
                     <img src="img/option/option-4.webp" alt="">
                 </a>
-                <a href="" class="option__item animate-up">
+                <a href="" class="option__item animate-up popup-btn">
                     ГИМС
                     <img src="img/option/option-5.webp" alt="">
                 </a>
-                <a href="" class="option__item animate-up">
+                <a href="" class="option__item animate-up popup-btn">
                     Спецтехника
                     <img src="img/option/option-6.webp" alt="">
                 </a>
@@ -463,6 +465,25 @@
         </div>
     </footer>
     
+    <div class="popup">
+        <div class="popup__body">
+            <div class="popup__close"><span></span><span></span></div>
+            <span class="popup__header">Отличный выбор!</span>
+            <span class="popup__trigger">Только <div class="today"></div> для вас доступна скидка по онлайн-заявке</span>
+            <a href="#" class="popup__button">
+                <div class="popup__button-img">
+                    <img src="img/icons/telegram.svg" alt="">
+                </div>
+                <span class="popup__button-text">
+                    Оставить заявку
+                </span>
+            </a>
+            <a href="mailto:" class="popup__mail">mail@yandex.ru</a>
+        </div>
+    </div>
+
+    <div class="circle popup-btn"></div>
+
     <script src="js/typed.js"></script>
     <script src="js/main.js"></script>
 </body>

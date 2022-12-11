@@ -229,7 +229,6 @@ a.header__feedback {
   font-weight: normal;
   line-height: 120%;
   font-size: 64px;
-  margin-bottom: 30px;
 }
 .main__wrapper h1 .typing {
   display: inline;
@@ -237,6 +236,9 @@ a.header__feedback {
   font-family: 'Rubik-Bold', sans-serif;
   font-weight: normal;
   line-height: 120%;
+}
+.main__wrapper h1 .typing__wrapper {
+  min-height: 180px;
 }
 .main__wrapper h1 .typed-cursor {
   color: #fff;
@@ -293,6 +295,7 @@ a.header__feedback {
   padding: 40px;
   min-height: 300px;
   overflow: hidden;
+  cursor: pointer;
 }
 .services__item img {
   position: absolute;
@@ -969,6 +972,158 @@ a.header__feedback {
 .message-show {
   transform: translateX(0);
 }
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all ease-in-out;
+}
+.popup__body {
+  width: 600px;
+  height: 400px;
+  border-radius: 20px;
+  padding: 50px;
+  background: #fff;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-105%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.popup__header,
+.popup__trigger {
+  display: block;
+  text-align: center;
+}
+.popup__header {
+  font-size: 38px;
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: normal;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+.popup__trigger {
+  font-size: 24px;
+}
+.popup .today {
+  display: inline;
+  font-family: 'Rubik-Medium', sans-serif;
+  font-weight: normal;
+  line-height: 120%;
+}
+.popup__button {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  height: 80px;
+  border-radius: 20px;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 1px solid #f4f4f4;
+}
+.popup__button-img {
+  padding: 20px;
+  background: #f4f4f4;
+}
+.popup__button-img img {
+  max-width: 40px;
+}
+.popup__button-text {
+  font-size: 18px;
+  font-family: 'Rubik-Bold', sans-serif;
+  font-weight: normal;
+  line-height: 120%;
+  padding: 0px 30px;
+}
+.popup__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.popup__close span {
+  width: 20px;
+  height: 2px;
+  background: #c4c4c4;
+}
+.popup__close span:first-child {
+  transform: translateY(5px) rotate(45deg);
+}
+.popup__close span:last-child {
+  transform: translateY(-5px) rotate(-45deg);
+}
+.popup-show {
+  visibility: visible;
+  opacity: 1;
+}
+.popup__body-show {
+  animation: popupAnimate 0.5s ease-in-out forwards;
+}
+@keyframes popupAnimate {
+  0% {
+    top: 0%;
+    transform: translateX(-50%) translateY(-105%);
+  }
+  50% {
+    top: 50%;
+    transform: translateX(-50%) translateY(0%);
+  }
+  100% {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  bottom: 20px;
+  background: #43A1FF url(../img/icons/choise-2.svg) no-repeat center;
+  background-size: 50px 50px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.circle:before {
+  content: '';
+  width: 90px;
+  height: 90px;
+  background: url(../img/icons/button.svg) no-repeat center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: circleAnimate 10s infinite linear;
+}
+.circle-up {
+  bottom: 150px;
+}
+@keyframes circleAnimate {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
 @media (max-width: 1100px) {
   .container {
     max-width: none;
@@ -1175,8 +1330,10 @@ a.header__feedback {
   }
   .main__wrapper h1 {
     max-width: 300px;
-    font-size: 28px;
-    margin-bottom: 25px;
+    font-size: 26px;
+  }
+  .main__wrapper h1 .typing__wrapper {
+    min-height: 80px;
   }
   .main__wrapper h2 {
     max-width: none;
@@ -1470,5 +1627,25 @@ a.header__feedback {
   }
   .message__link {
     font-size: 14px;
+  }
+  .popup__body {
+    width: 95%;
+    height: 400px;
+    padding: 30px;
+  }
+  .popup__header {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .popup__trigger {
+    font-size: 22px;
+    max-width: 90%;
+  }
+  .popup__button {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .popup__button-text {
+    padding: 0px 20px;
   }
 }

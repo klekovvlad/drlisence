@@ -104,11 +104,36 @@ if(dateItem){
 //Сообщение
 const message = document.querySelector('.message');
 const messageClose = document.querySelector('.message__close');
+const cirlce = document.querySelector('.circle');
 
 function showMessage() {
     message.classList.add('message-show');
+    cirlce.classList.add('circle-up');
 };
-setTimeout(showMessage,7000);
-messageClose.addEventListener('click', () => {
-    message.classList.remove('message-show');
-});
+if(message){
+    setTimeout(showMessage,7000);
+    messageClose.addEventListener('click', () => {
+        message.classList.remove('message-show');
+        cirlce.classList.remove('circle-up');
+    });
+};
+
+//Pop-up
+const popupBtn = document.querySelectorAll('.popup-btn');
+const popup = document.querySelector('.popup');
+const popupBody = document.querySelector('.popup__body');
+const popupClose = document.querySelector('.popup__close');
+
+if(popupBtn){
+    popupBtn.forEach(popupItem => {
+        popupItem.addEventListener('click', (e) => {
+            e.preventDefault();
+            popup.classList.add('popup-show');
+            popupBody.classList.add('popup__body-show');
+        });
+    });
+    popupClose.addEventListener('click', () => {
+        popup.classList.remove('popup-show');
+        popupBody.classList.remove('popup__body-show');
+    });
+};
