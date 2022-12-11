@@ -137,3 +137,12 @@ if(popupBtn){
         popupBody.classList.remove('popup__body-show');
     });
 };
+
+//Отзывы
+const feedbackPhoto = document.querySelector('.feedback__photo-wrapper');
+if(feedbackPhoto){
+    lightGallery(feedbackPhoto, {
+        thumbnail: true,
+});
+}
+
