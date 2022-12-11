@@ -86,3 +86,29 @@ if(typed) {
         loop: true // Указываем, повторять ли анимацию
     });
 }
+
+//Дата
+let now = new Date();
+const dateItem = document.querySelectorAll('.today');
+const options = {
+    month: 'long',
+    day: 'numeric',
+  };
+
+if(dateItem){
+    dateItem.forEach(el => {
+        el.innerHTML = now.toLocaleString("ru", options);
+    })
+}
+
+//Сообщение
+const message = document.querySelector('.message');
+const messageClose = document.querySelector('.message__close');
+
+function showMessage() {
+    message.classList.add('message-show');
+};
+setTimeout(showMessage,7000);
+messageClose.addEventListener('click', () => {
+    message.classList.remove('message-show');
+});
