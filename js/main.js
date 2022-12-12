@@ -138,11 +138,4 @@ if(popupBtn){
     });
 };
 
-//Отзывы
-const feedbackPhoto = document.querySelector('.feedback__photo-wrapper');
-if(feedbackPhoto){
-    lightGallery(feedbackPhoto, {
-        thumbnail: true,
-});
-}
 

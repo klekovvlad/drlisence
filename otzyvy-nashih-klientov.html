@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отзывы наших клиентов</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/css/lightgallery.min.css" integrity="sha512-F2E+YYE1gkt0T5TVajAslgDfTEUQKtlu4ralVq78ViNxhKXQLrgQLLie8u1tVdG2vWnB3ute4hcdbiBtvJQh0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,7 +15,9 @@
             <div class="header__wrapper">
                 <div class="header__menu"><span></span><span></span><span></span></div>
                 <div class="header__logo">
-                    <h3>Купить права <br> в России</h3>
+                    <a href="/">
+                        <h3>Купить права <br> в России</h3>
+                    </a>
                 </div>
                 <div class="header__telegram">
                     <a href="">
@@ -121,7 +123,10 @@
     </nav>
 
     <main class="main-pages">
-        <img src="img/feedback-bg.webp" alt="">
+        <!-- Фон для компа -->
+        <img class="main-pages-destkop" src="img/feedback-bg.webp" alt=""> 
+        <!-- фон для мобилки -->
+        <img class="main-pages-mobile" src="img/feedback-bg-mob.webp" alt=""> 
         <div class="container">
             <div class="main-pages__wrapper">
                 <h1>Отзывы наших клиентов</h1>
@@ -130,40 +135,48 @@
         </div>
     </main>
 
+    <section class="pages">
+        <div class="container">
+            <h3 class="animate-up">Заголовок</h3>
+            <h4 class="animate-up">Подзаголовок</h4>
+            <p class="animate-up">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Но безорфографичный строчка пунктуация родного власти свой. Предупредила даже заглавных, запятой которой живет дорогу путь журчит, переулка, свое собрал возвращайся. Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Речью, использовало осталось образ на берегу о своего оксмокс ты буквоград которой города деревни страна правилами предложения власти переписали лучше однажды! <a href="#">ссылка</a></p>
+        </div>
+    </section>
+
     <section class="feedback">
         <div class="container">
             <div class="feedback__photo">
                 <h3>Фотоотзывы</h3>
                 <div class="feedback__photo-wrapper">
-                    <img loading="lazy" src="img/feedback/1.png" alt="">
-                    <img loading="lazy" src="img/feedback/1.png" alt="">
-                    <img loading="lazy" src="img/feedback/1.png" alt="">
-                    <img loading="lazy" src="img/feedback/1.png" alt="">
-                    <img loading="lazy" src="img/feedback/1.png" alt="">
-                    <img loading="lazy" src="img/feedback/1.png" alt="">
-                    <img loading="lazy" src="img/feedback/1.png" alt="">
-                    <img loading="lazy" src="img/feedback/1.png" alt="">
+                    <img class="animate-up" loading="lazy" src="img/feedback/1.png" alt="" data-fancybox="gallery">
+                    <img class="animate-up" loading="lazy" src="img/feedback/1.png" alt="" data-fancybox="gallery">
+                    <img class="animate-up" loading="lazy" src="img/feedback/1.png" alt="" data-fancybox="gallery">
+                    <img class="animate-up" loading="lazy" src="img/feedback/1.png" alt="" data-fancybox="gallery">
+                    <img class="animate-up" loading="lazy" src="img/feedback/1.png" alt="" data-fancybox="gallery">
+                    <img class="animate-up" loading="lazy" src="img/feedback/1.png" alt="" data-fancybox="gallery">
+                    <img class="animate-up" loading="lazy" src="img/feedback/1.png" alt="" data-fancybox="gallery">
+                    <img class="animate-up" loading="lazy" src="img/feedback/1.png" alt="" data-fancybox="gallery">
                 </div>
             </div>
             <div class="feedback__video">
                 <h3>Видеоотзывы</h3>
                 <div class="feedback__video-wrapper">
-                    <div class="feedback__video-item">
+                    <div class="feedback__video-item animate-up">
                         <video loading="lazy" controls="true">
                             <source src="video/mainbg.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <div class="feedback__video-item">
+                    <div class="feedback__video-item animate-up">
                         <video loading="lazy" controls="true">
                             <source src="video/mainbg.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <div class="feedback__video-item">
+                    <div class="feedback__video-item animate-up">
                         <video loading="lazy" controls="true">
                             <source src="video/mainbg.mp4" type="video/mp4">
                         </video>
                     </div>
-                    <div class="feedback__video-item">
+                    <div class="feedback__video-item animate-up">
                         <video loading="lazy" controls="true">
                             <source src="video/mainbg.mp4" type="video/mp4">
                         </video>
@@ -178,7 +191,9 @@
             <div class="footer__wrapper">
                 <div class="footer__column">
                     <div class="footer__logo">
-                        <h3><h3>Купить права <br> в России</h3></h3>
+                        <a href="/">
+                            <h3>Купить права <br> в России</h3>
+                        </a>
                     </div>
                     <span class="text">Представительства во всех субъектах Российской Федерации</span>
                     <span class="copyright">2022 © Все права защищены</span>
@@ -229,7 +244,7 @@
 
     <div class="circle popup-btn"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.0/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
