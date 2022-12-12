@@ -1988,10 +1988,28 @@ a.header__feedback {
     }
 }
 
+@media (max-width: 361px) {
+    a.header__feedback {
+        margin-left: 7px;
+        padding: 16px 7px;
+    }
+}
+
 @media (max-width:321px) {
     a.header__feedback {
         font-size: 12px;
         padding: 16px 5px;
         margin-left: 10px;
+    }
+    .services {
+        &__item {
+            h5 {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            span.text {
+                font-size: 14px;
+            }
+        }
     }
 }
