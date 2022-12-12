@@ -828,12 +828,11 @@ a.header__feedback {
 .main-pages img {
   position: absolute;
   z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 1920px;
+  max-width: 1920px;
 }
 .main-pages-mobile {
   display: none;
@@ -1766,6 +1765,7 @@ a.header__feedback {
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
+    min-width: 100%;
     max-width: none;
     height: 100%;
   }
