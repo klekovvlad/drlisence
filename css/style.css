@@ -1938,3 +1938,10 @@ a.header__feedback {
     padding-bottom: 30px;
   }
 }
+@media (max-width: 321px) {
+  a.header__feedback {
+    font-size: 12px;
+    padding: 16px 5px;
+    margin-left: 10px;
+  }
+}
